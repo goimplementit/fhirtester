@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<web-app>
+	<filter>
+		<filter-name>Guice Filter</filter-name>
+		<filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Guice Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.goimplement.it.ContextListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>username</param-name>
+		<param-value>username</param-value>
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>password</param-value>
+	</context-param>
+	<context-param>
+		<param-name>serverAddress</param-name>
+		<param-value>http://default-environment.mhy4cxavn9.eu-west-1.elasticbeanstalk.com/hl7fhir/</param-value>
+	</context-param>
+</web-app>
